@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portfólio de Geovani Galdino, desenvolvedor front-end." />
+    <title>Geovani Galdino | Desenvolvedor Front-end</title>
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { ink: "#243447", coral: "#e76f51", sand: "#f8f5f0" },
+            fontFamily: { display: ["Georgia", "serif"], sans: ["Trebuchet MS", "sans-serif"] }
+          }
+        }
+      };
+    </script>
+    <style type="text/tailwindcss">
+      @layer components {
+        .section-title { @apply mb-8 font-display text-3xl font-bold text-ink; }
+        .project-card { @apply overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm; }
+        .tag { @apply rounded-full bg-orange-100 px-3 py-1 text-xs font-semibold text-orange-800; }
+        .social-link { @apply flex h-11 w-11 items-center justify-center rounded-full border border-slate-300 text-ink; }
+      }
+    </style>
+  </head>
+
+  <body class="bg-sand font-sans text-ink antialiased">
+    <header class="border-b border-slate-200 bg-sand">
+      <nav class="mx-auto flex max-w-6xl items-center justify-between px-5 py-5 lg:px-8" aria-label="Navegação principal">
+        <a href="#inicio" class="font-display text-xl font-bold">Geovani<span class="text-coral">.</span></a>
+        <div class="flex gap-5 text-sm font-semibold"><a href="#sobre">Sobre</a><a href="#projetos">Projetos</a><a href="#contato">Contato</a></div>
+      </nav>
+    </header>
+
+    <main id="inicio">
+      <section class="mx-auto max-w-6xl px-5 py-24 lg:px-8 lg:py-32">
+        <p class="mb-4 text-sm font-bold uppercase tracking-[0.2em] text-coral">Olá, eu sou Geovani</p>
+        <h1 class="max-w-3xl font-display text-5xl font-bold leading-tight sm:text-6xl">Desenvolvedor front-end em construção.</h1>
+        <p class="mt-6 max-w-2xl text-lg leading-8 text-slate-600">Crio interfaces responsivas e fáceis de usar enquanto avanço meus estudos em desenvolvimento web e Java.</p>
+      </section>
+
+      <section id="sobre" class="border-y border-slate-200 bg-white py-20">
+        <div class="mx-auto max-w-6xl px-5 lg:px-8">
+          <h2 class="section-title">Sobre mim</h2>
+          <div class="grid gap-10 lg:grid-cols-[1fr_1.4fr]">
+            <p class="text-2xl font-semibold leading-snug">Gosto de transformar uma ideia simples em uma experiência digital clara.</p>
+            <div class="space-y-5 leading-7 text-slate-600"><p>Sou estudante de Análise e Desenvolvimento de Sistemas e estou no início da minha carreira como desenvolvedor front-end. Tenho estudado HTML, CSS, JavaScript e back-end com Java.</p><p>Nos meus projetos, pratico responsividade, organização de código e atenção aos detalhes. Meu objetivo é continuar aprendendo e contribuir com soluções úteis.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mx-auto max-w-6xl px-5 py-20 lg:px-8">
+        <h2 class="section-title">Habilidades</h2>
+        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4"><div class="rounded-lg border border-slate-200 bg-white p-5"><strong class="text-lg">HTML</strong><p class="mt-2 text-sm text-slate-500">Estrutura semântica</p></div><div class="rounded-lg border border-slate-200 bg-white p-5"><strong class="text-lg">CSS</strong><p class="mt-2 text-sm text-slate-500">Layouts responsivos</p></div><div class="rounded-lg border border-slate-200 bg-white p-5"><strong class="text-lg">JavaScript</strong><p class="mt-2 text-sm text-slate-500">Conhecimentos básicos</p></div><div class="rounded-lg border border-slate-200 bg-white p-5"><strong class="text-lg">Java</strong><p class="mt-2 text-sm text-slate-500">Orientação a objetos</p></div></div>
+      </section>
+
+      <section id="projetos" class="border-y border-slate-200 bg-white py-20">
+        <div class="mx-auto max-w-6xl px-5 lg:px-8"><h2 class="section-title">Projetos</h2><div class="grid gap-7 md:grid-cols-2 lg:grid-cols-3">
+          <article class="project-card"><img class="h-44 w-full object-cover" src="assets/img/tela-inicial-landpage-lucas-evaristo.png" alt="Landing page Lucas Evaristo" loading="lazy" /><div class="p-5"><h3 class="text-xl font-bold">Landing page Lucas Evaristo</h3><p class="mt-3 text-sm leading-6 text-slate-600">Página para apresentar materiais didáticos e terapêuticos gratuitos.</p><div class="mt-5 flex flex-wrap gap-2"><span class="tag">HTML</span><span class="tag">CSS</span></div></div></article>
+          <article class="project-card"><img class="h-44 w-full object-cover" src="assets/img/code-exibirMenu.png" alt="Projeto LiterTech" loading="lazy" /><div class="p-5"><h3 class="text-xl font-bold">LiterTech</h3><p class="mt-3 text-sm leading-6 text-slate-600">Catálogo de livros em Java com API Gutendex e PostgreSQL.</p><div class="mt-5 flex flex-wrap gap-2"><span class="tag">Java</span><span class="tag">Spring</span><span class="tag">PostgreSQL</span></div></div></article>
+          <article class="project-card"><img class="h-44 w-full object-cover" src="assets/img/tela-inicial-landpage-curso-nails.PNG" alt="Landing page Curso Nails Designer" loading="lazy" /><div class="p-5"><h3 class="text-xl font-bold">Curso Nails Designer</h3><p class="mt-3 text-sm leading-6 text-slate-600">Landing page de estudo para divulgação de um curso.</p><div class="mt-5 flex flex-wrap gap-2"><span class="tag">HTML</span><span class="tag">CSS</span></div></div></article>
+          <article class="project-card"><img class="h-44 w-full object-cover" src="assets/img/tela-conversor.PNG" alt="Conversor de moedas" loading="lazy" /><div class="p-5"><h3 class="text-xl font-bold">Conversor de moedas</h3><p class="mt-3 text-sm leading-6 text-slate-600">Aplicação Java com histórico de conversões e várias moedas.</p><div class="mt-5 flex flex-wrap gap-2"><span class="tag">Java</span><span class="tag">API</span></div></div></article>
+          <article class="project-card"><img class="h-44 w-full object-cover" src="assets/img/tela-amigo-secreto.PNG" alt="Projeto Amigo Secreto" loading="lazy" /><div class="p-5"><h3 class="text-xl font-bold">Amigo secreto</h3><p class="mt-3 text-sm leading-6 text-slate-600">Sorteio simples feito para praticar JavaScript.</p><div class="mt-5 flex flex-wrap gap-2"><span class="tag">HTML</span><span class="tag">JavaScript</span></div></div></article>
+        </div></div>
+      </section>
+
+      <section id="contato" class="mx-auto max-w-6xl px-5 py-20 lg:px-8"><h2 class="section-title">Redes sociais</h2><p class="max-w-lg leading-7 text-slate-600">Você pode encontrar meus projetos e acompanhar meu trabalho pelas redes abaixo.</p><div class="mt-7 flex gap-3"><a class="social-link" href="https://github.com/geovanigaldino" target="_blank" rel="noreferrer" aria-label="GitHub">GH</a><a class="social-link" href="https://www.linkedin.com/in/geovanigaldino/" target="_blank" rel="noreferrer" aria-label="LinkedIn">in</a><a class="social-link" href="mailto:contato.geovanigaldino@gmail.com" aria-label="Enviar e-mail">@</a></div></section>
+    </main>
+
+    <footer class="border-t border-slate-200 py-6 text-center text-sm text-slate-500"><p>© 2026 Geovani Galdino. Feito com HTML e Tailwind CSS.</p></footer>
+  </body>
+</html>
